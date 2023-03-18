@@ -1,0 +1,133 @@
+:root {
+  --color-grey-1: #333333;
+  --color-grey-2: #4f4f4f;
+  --color-grey-3: #bdbdbd;
+  --color-white: #fff;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --16-px: 1.5rem;
+}
+
+body {
+  font-family: "Space Mono", "sans-serif";
+  color: var(--color-grey-2);
+}
+h1,
+h2,
+h3 {
+  color: var(--color-grey-1);
+  margin: 0;
+}
+/* Global Css */
+.fw-700 {
+  font-weight: var(--fw-bold);
+}
+
+.fw-400 {
+  font-weight: var(--fw-regular);
+}
+
+.container {
+  padding: 1.25rem 0 0 1.5rem;
+  height: calc(100vh - 5rem);
+}
+
+.page-header {
+  margin-bottom: 4rem;
+}
+
+.page-header__title {
+  font-size: var(--16-px);
+  text-transform: uppercase;
+  letter-spacing: -0.08em;
+  line-height: 25px;
+}
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-body__image img {
+  height: 238px;
+  width: 286px;
+  margin-bottom: 60px;
+}
+
+.page-body__content__title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  line-height: 71px; 
+}
+.page-body__content__text {
+  font-size: 1.125rem;
+  width: auto;
+  margin-bottom: 66px;
+  line-height: 26.66px;
+  letter-spacing: -0.035em;
+  padding-right: 24px;
+}
+.page-body__content__button {
+  background-color: var(--color-grey-1);
+  color: var(--color-white);
+}
+.page-body__content__button__text {
+  display: block;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  padding: var(--16-px) 2.6875rem 1.4375rem;
+}
+
+.page-footer {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 24px;
+}
+
+.page-footer__text {
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-grey-3);
+  margin: 0;
+}
+.page-footer__text span {
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+}
+
+@media (min-width: 949px) {
+  .container {
+    padding: 2.5rem 4.8rem;
+  }
+  .page-header {
+    margin-bottom: 0;
+  }
+  .page-body {
+   flex-direction: row;
+   justify-content: space-around;
+   height: 100%
+  }
+  .page-body__image img {
+    width: 539px;
+    height: 447px;
+  }
+  .page-body__content__title {
+    font-size: 4rem;
+    margin-bottom: 36px;
+    line-height: 95px;
+  }
+  .page-body__content__text {
+    width: auto;
+    margin-bottom: 64px;
+    line-height: 36px;
+    font-size: var(--16-px);
+    padding-right: unset;
+  }
+  .page-body__content,
+  .page-body__image {
+    flex: 50%;
+  }
+}
